@@ -7,6 +7,9 @@ paragraph.to2.txt
 paragraph.from.txt
 paragraph.to3.txt
 10 8 -wa
+paragraph.from.txt
+paragraph.to4.txt
+10 8 -du
 
 cat.from.jpg
 cat.to1.jpg
@@ -17,6 +20,12 @@ cat.to2.jpg
 cat.from.jpg
 cat.to3.jpg
 30 8 -wa
+cat.from.jpg
+cat.to4.jpg
+30 8 -du
+cat.from.jpg
+cat.to5.jpg
+1 64 -ra -du
 
 cat.from.mp4
 cat.to1.mp4
@@ -27,3 +36,7 @@ cat.to2.mp4
 cat.from.mp4
 cat.to3.mp4
 50 4 -wa
+cat.from.mp4
+cat.to4.mp4
+1 1 -du
+//cat.to4.mp4: It seems that the video stops even with 1-byte duplication.

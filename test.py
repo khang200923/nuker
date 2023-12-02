@@ -13,7 +13,7 @@ def test(pathfrom: str, pathto: str, rockets: int, radius: int, modes: CorruptMo
 def testall(testdir: str):
     with open(join(abspath(testdir), 'testguide.txt'), 'r', encoding='utf-8') as f:
         lines = f.readlines()
-        guide = chunked((x[:-1] for x in lines if x != '\n'), 3)
+        guide = chunked((x[:-1] for x in lines if x != '\n' and not x.startswith('//')), 3)
 
     for pathfrom, pathto, info in guide:
         infosplit = info.split(' ')
@@ -23,6 +23,7 @@ def testall(testdir: str):
             '-re' in infosplit,
             '-ra' in infosplit,
             '-wa' in infosplit,
+            '-du' in infosplit,
         )
         test(join(abspath(testdir), pathfrom), join(abspath(testdir), pathto), rockets, radius, modes)
 

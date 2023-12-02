@@ -5,9 +5,10 @@ import random
 
 @dataclass
 class CorruptModes:
-    reverse: bool
-    randomize: bool
-    wash: bool
+    reverse: bool = False
+    randomize: bool = False
+    wash: bool = False
+    duplicate: bool = False
 
 def corrupt(data: bytes, radius: int, modes: CorruptModes) -> bytes:
     newdata = list(data)
@@ -23,6 +24,8 @@ def corrupt(data: bytes, radius: int, modes: CorruptModes) -> bytes:
             byte_target = (target + i) % len(data)
             if random.random() < 0.9:
                 newdata[byte_target] = random.randint(0, 255)
+    if modes.duplicate:
+        newdata[target:target+radius] = newdata[target:target+radius]*2
 
     return bytes(newdata)
 
@@ -43,6 +46,7 @@ def main():
         '-re' in command,
         '-ra' in command,
         '-wa' in command,
+        '-du' in command,
     )
     if not os.path.exists(filepath):
         print('File does not exist')
