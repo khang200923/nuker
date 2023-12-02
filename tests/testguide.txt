@@ -1,0 +1,29 @@
+paragraph.from.txt
+paragraph.to1.txt
+5 32 -re
+paragraph.from.txt
+paragraph.to2.txt
+10 16 -ra
+paragraph.from.txt
+paragraph.to3.txt
+10 8 -wa
+
+cat.from.jpg
+cat.to1.jpg
+20 12 -re
+cat.from.jpg
+cat.to2.jpg
+10 16 -ra
+cat.from.jpg
+cat.to3.jpg
+30 8 -wa
+
+cat.from.mp4
+cat.to1.mp4
+30 8 -re
+cat.from.mp4
+cat.to2.mp4
+3 48 -ra
+cat.from.mp4
+cat.to3.mp4
+50 4 -wa

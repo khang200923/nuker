@@ -1,0 +1,7 @@
+tests/*
+!tests/testguide.txt
+!tests/paragraph.from.txt
+!tests/cat.from.jpg
+!tests/cat.from.mp4
+
+__pycache__/
